@@ -1,0 +1,165 @@
+<html>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+input[type=text],input[type=password]{
+	width:50%;
+	padding : 12px 20px;
+	margin:8px,0;
+border:0;
+border-radius: 6px;	
+}
+input[type="button"],input[type="reset"]{
+	width: 25%;
+	padding:12px 20px;
+	margin: 8px,0;
+	border:0;
+	background-color: #006680;
+    color: white;
+    cursor: pointer;	
+}
+	input[type="button"]:hover{
+	background-color: #47d147;
+	color: black;
+}
+input[type="reset"]:hover{
+	background-color: #ff0000;
+color: black;
+}
+body {
+  margin: 0;
+  background:url(register.jpg);
+  background-size:cover;
+}
+
+.header {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #006680;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 70px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="banner.jpg" style="width: 1400px;" />
+</div>
+
+<div id="navbar">
+  <a href="#home" class="fa fa-home" style="font-size:20px;padding: 21px 15px; "> </a>
+  <a href="#login" style="font-size:20px;padding: 15px 13px;">login</a>
+  <a href="#con" style="font-size:20px;padding: 15px 13px;">contact</a>
+  <a href="login.html" style="font-size:20px;padding: 15px 13px;">Admin</a>
+</div>
+<div class="content">
+	<div id="home" style=" padding: 20px">
+  <P style="text-align:center;margin-left: 20%;margin-right: 20%;">The GVP College of Engineering, Visakhapatnam started in 1996, has very quickly established itself as one of the most-preferred private engineering colleges in Andhra Pradesh. College has been accredited by NAAC in 2009 with an A grade (with a score of 3.47/4.00). The college has been sanctioned �Autonomous� status by the UGC and conferred by the affiliating University, JNT University, Kakinada in 2009.</p>
+
+<p style="text-align:center;margin-left: 20%;margin-right: 20%;">GVP College of Engineering has 7 UG Programs, 13 PG Programs and 8 Departments were recognized as Research Centers by the affiliated University, JNTU-K, Kakinada. All the 7 UG programmes are accredited by NBA and 5 of them are accredited as per Outcome Based Education (OBE) and 5 PG programs are applied for NBA as per OBE. 
+
+Established Scientific & Industrial Research Centre (SIRC) recognized by Ministry of Science and Technology. College has granted TEQIP-II, S.C-1.2 Project to enhance PG Education and demand driven research and Innovation.
+
+GVP College of Engineering is Partner with Government of Andhra Pradesh and government of Germany (GTZ) in establishing and managing the Indo-German Institute of Advanced Technology, Visakhapatnam since 2005.
+
+GVP-Prof. V. Lakshmikantham Institute of Advanced Studies is in the College and Scholarships and expenses of the Institute are met from the Corpus of Rs. 2 Crores given for the development of Mathematical Sciences.
+
+Students are joining with Best EAMCET Rank and ECET Ranks in UG Programs more GATE Qualified students in the PG Programs
+
+Out of a total faculty strength of 280, 70 are Ph.Ds and 207 are with PG. 34 of the faculty are currently registered for Ph.Ds, 29 of them with our own faculty as guides/co-guides.</p>
+</div><br><br>
+<div id="login" style="margin:50;margin-left:35%">
+
+<h1 style="color:#004d4d">Sign in:</h1>
+<form>
+	<p id="display" style="color: red"> </p>
+<p>Email:</p>
+<input type="text" placeholder="Email@gmail.com" id="mail" pattern="[a-zA-z0-9]+[@]+[a-zA-z].+[c]+[o][m]"/>
+<p>Password:</p>
+<input type="password" placeholder="password" id="pass" pattern="[a-zA-Z0-9]{6,}"/><br><br>
+<input type="checkbox"  value="remember"/>remember me<br><br>
+<input type="button"  align="center" value="Sign in" onclick="newDoc()"/>
+<input type="reset" id="re" align="center" value="reset"/>
+</form>
+</div><br><br><br><br>
+<div id="con" style="font-size:20px;text-align:center;">
+	<P>Gayatri Vidya Parishad College of Engineering(Autonomous)
+Madhurawada, Visakhapatnam - 530 048
+Andhra Pradesh
+India</p>
+<p>
+Telephone No. : 91-891-2739507
+Fax : 91-891-2739605
+E-Mail : <a href="#">gvpce@yahoo.com</a>   (or) <a href="#" >principal@gvpce.ac.in</a>
+</p>
+</div>
+</div>
+</body>
+<script>
+
+
+function newDoc() {
+		var a=document.getElementById("mail").value;
+		var b=document.getElementById("pass").value;
+	    var hode="hod@gmail.com";
+	    var hodp="hod123";
+	    var face="faculty@gmail.com";
+	    var facp="faculty123";
+	    if(a==hode&&b==hodp){
+        window.location="hodlogin.html";	    }
+	   else if(a==face&&b==facp){
+        window.location="facultylogin.html";	    }
+       else{
+       	 document.getElementById("display").innerHTML = "Invalide user: please try again";
+       }
+      }
+window.onscroll = function() {myFunction();};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</html>

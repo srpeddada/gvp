@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+input[type=text],input[type=password]{
+	width:50%;
+	padding : 12px 20px;
+	margin:8px,0;
+border:0;
+border-radius: 6px;	
+}
+input[type="button"],input[type="reset"]{
+	width: 25%;
+	padding:12px 20px;
+	margin: 8px,0;
+	border:0;
+	background-color: #006680;
+    color: white;
+    cursor: pointer;	
+}
+	input[type="button"]:hover{
+	background-color: #47d147;
+	color: black;
+}
+input[type="reset"]:hover{
+	background-color: #ff0000;
+color: black;
+}
+
+</style>
+</head>
+<body  align="center" style="margin:50;background:url(register.jpg);background-size:100%;margin-left:35%">
+	<h1 style="color:#004d4d;"> Are you an Admin ?</h1>
+<h1 style="color:#004d4d;"> Admin Sign in:</h1>
+<form>
+	<p id="display" style="color: red;"> </p>
+<p>Email:</p>
+<input type="text" placeholder="Email@gmail.com" id="mail" pattern="[a-zA-z0-9]+[@]+[a-zA-z].+[c]+[o][m]"/>
+<p>Password:</p>
+<input type="password" placeholder="password" id="pass" pattern="[a-zA-Z0-9]{6,}"/><br><br>
+<input type="checkbox"  value="remember"/>remember me<br><br>
+<input type="button"  align="center" value="Sign in" onclick="vali()"/>
+<input type="reset"  align="center" value="reset"/>
+</form>
+</body>
+<script>
+	function vali() {
+		var a=document.getElementById("mail").value;
+		var b=document.getElementById("pass").value;
+	    var ade="admin@gmail.com";
+	    var adp="admin123";
+	    if(a==ade&&b==adp){
+	    	alert("hi");
+        window.location="admin.html";	}
+       else{
+       	 document.getElementById("display").innerHTML = "Invalide user: please try again";
+       }
+      }
+	
+</script>
+</html>

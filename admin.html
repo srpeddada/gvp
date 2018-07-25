@@ -1,0 +1,87 @@
+<html>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin-left: 0;
+  padding:0px 0px;
+  background:url(login1.jpg);
+  background-size:cover;
+}
+.header {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #16315b;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: grey;
+  color: black;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 70px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="banner.jpg" style="width: 1400px;" />
+</div>
+
+<div id="navbar">
+  <a href="main1.html" class="fa fa-home" style="font-size:20px;padding: 21px 15px; "> </a>
+  <a href="#" style="font-size:20px;padding: 15px 13px;">Tasks</a>
+  <a href="#con" style="font-size:20px;padding: 15px 13px;">contact</a>
+</div>
+<div class="content">
+	<h1 style="color: #16315b"> Admin page:</h1>
+	<iframe src="hod.html" width="1000" height="500" style="top:0px; left:0px; bottom:0px; right:0px; border: 10;padding:0px 0px;margin-left:17%">
+	 </iframe>
+	 <iframe src="faculty.html" width="1000" height="500" style=" border: 10;padding:10px 0px;margin-left:17%;margin-top:10%">
+	 </iframe>
+</div>
+</body>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</html>
